@@ -389,13 +389,18 @@ button {
 .card-one {
   grid-area: cardOne;
 }
+@media (min-width: 768px) {
+  .card-one {
+    animation: slideDown 1s cubic-bezier(0.6, 0.04, 0.98, 0.335) forwards;
+  }
+}
 
 .card-two {
   grid-area: cardTwo;
 }
 @media (min-width: 768px) {
   .card-two {
-    animation: slideRight 1.5s cubic-bezier(0.6, 0.04, 0.98, 0.335) forwards;
+    animation: slideRight 1s cubic-bezier(0.6, 0.04, 0.98, 0.335) forwards;
   }
 }
 
@@ -404,7 +409,7 @@ button {
 }
 @media (min-width: 768px) {
   .card-three {
-    animation: slideLeft 1.5s cubic-bezier(0.6, 0.04, 0.98, 0.335) forwards;
+    animation: slideLeft 1s cubic-bezier(0.6, 0.04, 0.98, 0.335) forwards;
   }
 }
 
@@ -415,12 +420,17 @@ button {
   }
 }
 
+@keyframes slideDown {
+  0% {
+    transform: translateY(-400px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 @keyframes slideRight {
   0% {
     transform: translateX(-600px);
-  }
-  50% {
-    transform: scale(1.1);
   }
   100% {
     transform: translateX(0);
@@ -429,9 +439,6 @@ button {
 @keyframes slideLeft {
   0% {
     transform: translateX(600px);
-  }
-  50% {
-    transform: scale(1.1);
   }
   100% {
     transform: translateX(0);
