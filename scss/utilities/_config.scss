@@ -1,0 +1,42 @@
+// ==========================================================================
+// Global Config
+// ==========================================================================
+
+// Font Stacks
+$font-url--primary: 'https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap';
+$font-family--primary: 'Karla', sans-serif;
+
+// Font Weights
+$font-weight--medium: 400;
+$font-weight--bold: 700;
+
+// Descriptive Base Colors
+$white: #fff;
+$black: #000;
+$jungleGreen: #2ab2af;
+$pear: #c0df34;
+$blackSqueeze: #e5eff5;
+$gullGray: #98a6bd;
+
+// Color Usage
+$bck-col: $blackSqueeze;
+$btn-col: $pear;
+
+// Text
+$base__font-size: 16px;
+$base__line: 24px;
+$text--center: center;
+
+// Border radius
+$br-radius: 5px;
+
+// Path to Assets
+$path--rel: '../images';
+
+// Gutters
+$gutters: 1em;
+
+// Media queries
+$break--s: '(min-width: 600px)';
+$break--m: '(min-width: 768px)';
+$break--l: '(min-width: 1024px)';

@@ -1,0 +1,164 @@
+// ==========================================================================
+// Main
+// ==========================================================================
+
+.main {
+  @include flexy($f-dir: column, $j-content: center);
+  min-height: 100vh;
+  margin: initial;
+  flex: 1;
+}
+
+.card {
+  padding: $gutters;
+  border-top-left-radius: $br-radius;
+  border-top-right-radius: $br-radius;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding-bottom: em(30px);
+
+  @media #{$break--s} {
+    max-width: em(450px);
+  }
+
+  @media #{$break--m} {
+    max-width: em(600px);
+  }
+
+  @include m(white-col) {
+    background-color: $white;
+  }
+
+  @include m(green-col) {
+    background-color: $jungleGreen;
+    color: $white;
+    border-top-left-radius: initial;
+    border-top-right-radius: initial;
+
+    @media #{$break--m} {
+      border-bottom-left-radius: $br-radius;
+    }
+  }
+
+  @include m(lightgreen-col) {
+    color: $white;
+    background-color: lighten(#2ab2af, 2%);
+    border-top-left-radius: initial;
+    border-top-right-radius: initial;
+    border-bottom-left-radius: $br-radius;
+    border-bottom-right-radius: $br-radius;
+
+    @media #{$break--m} {
+      border-bottom-left-radius: initial;
+    }
+  }
+
+  @include e(price) {
+    font-size: em(35px);
+    font-weight: $font-weight--bold;
+    margin: 0;
+    line-height: 33px;
+
+    @include flexy();
+  }
+
+  @include e(span) {
+    font-size: em(6px);
+    color: $blackSqueeze;
+    margin-left: em(10px);
+  }
+
+  @include e(title) {
+    font-size: em(18px);
+
+    @include m(col) {
+      color: $jungleGreen;
+    }
+  }
+
+  @include e(subtitle) {
+    color: $pear;
+    font-weight: $font-weight--bold;
+  }
+
+  @include e(content) {
+    font-size: em(14px);
+    margin-top: em(8px);
+
+    @include m(col) {
+      color: $gullGray;
+
+      @media #{$break--m} {
+        max-width: 500px;
+      }
+    }
+  }
+
+  @include e(btn) {
+    background-color: $btn-col;
+    padding: em(10px) em(20px);
+    width: 100%;
+    max-width: 210px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    font-weight: $font-weight--bold;
+    margin-top: em(10px);
+  }
+
+  @include e(item) {
+    color: $blackSqueeze;
+    font-size: em(14px);
+  }
+}
+
+.card-one {
+  grid-area: cardOne;
+}
+
+.card-two {
+  grid-area: cardTwo;
+
+  @media #{$break--m} {
+    animation: slideRight 1.5s cubic-bezier(0.6, 0.04, 0.98, 0.335) forwards;
+  }
+}
+
+.card-three {
+  grid-area: cardThree;
+
+  @media #{$break--m} {
+    animation: slideLeft 1.5s cubic-bezier(0.6, 0.04, 0.98, 0.335) forwards;
+  }
+}
+
+.grid-container {
+  @media #{$break--m} {
+    display: grid;
+    grid-template-areas:
+      'cardOne cardOne'
+      'cardTwo cardThree';
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-600px);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(600px);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
