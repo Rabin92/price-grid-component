@@ -112,13 +112,17 @@
 
 .card-one {
   grid-area: cardOne;
+
+  @media #{$break--m} {
+    animation: slideDown 1s cubic-bezier(0.6, 0.04, 0.98, 0.335) forwards;
+  }
 }
 
 .card-two {
   grid-area: cardTwo;
 
   @media #{$break--m} {
-    animation: slideRight 1.5s cubic-bezier(0.6, 0.04, 0.98, 0.335) forwards;
+    animation: slideRight 1s cubic-bezier(0.6, 0.04, 0.98, 0.335) forwards;
   }
 }
 
@@ -126,7 +130,7 @@
   grid-area: cardThree;
 
   @media #{$break--m} {
-    animation: slideLeft 1.5s cubic-bezier(0.6, 0.04, 0.98, 0.335) forwards;
+    animation: slideLeft 1s cubic-bezier(0.6, 0.04, 0.98, 0.335) forwards;
   }
 }
 
@@ -139,12 +143,18 @@
   }
 }
 
+@keyframes slideDown {
+  0% {
+    transform: translateY(-400px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 @keyframes slideRight {
   0% {
     transform: translateX(-600px);
-  }
-  50% {
-    transform: scale(1.1);
   }
   100% {
     transform: translateX(0);
@@ -154,9 +164,6 @@
 @keyframes slideLeft {
   0% {
     transform: translateX(600px);
-  }
-  50% {
-    transform: scale(1.1);
   }
   100% {
     transform: translateX(0);
