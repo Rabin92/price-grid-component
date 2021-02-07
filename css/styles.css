@@ -306,7 +306,7 @@ button {
 }
 @media (min-width: 768px) {
   .card {
-    max-width: 37.5em;
+    max-width: initial;
   }
 }
 .card--white-col {
@@ -415,28 +415,6 @@ button {
   }
 }
 
-@keyframes slideRight {
-  0% {
-    transform: translateX(-600px);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-@keyframes slideLeft {
-  0% {
-    transform: translateX(600px);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
 .footer {
   padding: 2em;
   text-align: center;
