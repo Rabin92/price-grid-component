@@ -315,8 +315,7 @@ button {
 .card--green-col {
   background-color: #2ab2af;
   color: #fff;
-  border-top-left-radius: initial;
-  border-top-right-radius: initial;
+  border-radius: 0;
 }
 @media (min-width: 768px) {
   .card--green-col {
@@ -326,10 +325,7 @@ button {
 .card--lightgreen-col {
   color: #fff;
   background-color: #2cbab7;
-  border-top-left-radius: initial;
-  border-top-right-radius: initial;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-radius: 0 0 5px 5px;
 }
 @media (min-width: 768px) {
   .card--lightgreen-col {
