@@ -31,8 +31,7 @@
   @include m(green-col) {
     background-color: $jungleGreen;
     color: $white;
-    border-top-left-radius: initial;
-    border-top-right-radius: initial;
+    border-radius: 0;
 
     @media #{$break--m} {
       border-bottom-left-radius: $br-radius;
@@ -42,10 +41,7 @@
   @include m(lightgreen-col) {
     color: $white;
     background-color: lighten(#2ab2af, 2%);
-    border-top-left-radius: initial;
-    border-top-right-radius: initial;
-    border-bottom-left-radius: $br-radius;
-    border-bottom-right-radius: $br-radius;
+    border-radius: 0 0 $br-radius $br-radius;
 
     @media #{$break--m} {
       border-bottom-left-radius: initial;
