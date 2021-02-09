@@ -368,6 +368,7 @@ button {
   }
 }
 .card__btn {
+  display: block;
   background-color: #c0df34;
   padding: 0.625em 1.25em;
   width: 100%;
@@ -376,6 +377,7 @@ button {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   font-weight: 700;
   margin-top: 0.625em;
+  text-align: center;
 }
 .card__item {
   color: #e5eff5;
