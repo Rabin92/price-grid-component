@@ -90,6 +90,7 @@
   }
 
   @include e(btn) {
+    display: block;
     background-color: $btn-col;
     padding: em(10px) em(20px);
     width: 100%;
@@ -98,6 +99,7 @@
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     font-weight: $font-weight--bold;
     margin-top: em(10px);
+    text-align: $text--center;
   }
 
   @include e(item) {
